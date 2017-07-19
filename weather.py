@@ -12,7 +12,7 @@ def main():
 		data = arduino.readline()[:-2] #the last bit gets rid of the new-line chars
 		ct = time.asctime( time.localtime(time.time()) )
 		if data:
-			print (ct,data)
+			print (ct[0:3],',',ct[4:7],',',ct[8:10],',',ct[11:19],',',ct[20:24],data)
 
 if __name__ == "__main__":
     main()
