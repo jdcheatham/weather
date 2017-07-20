@@ -23,7 +23,7 @@ def main():
 			outfile.write(",")
 			outfile.write(ct[11:19])
 			outfile.write(",")
-			outfile.write(str(data))
+			outfile.write(str(data[3:12]))
 			outfile.write("\n")
 			outfile.close()
 
