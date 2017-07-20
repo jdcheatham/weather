@@ -15,8 +15,8 @@ def main():
 		if data:
 			"""outputs the data and timestamp"""
 			print (ct[4:10],',',ct[20:24],',',ct[11:19],',',data)
-			
-			outfile=open('weather','a')
+			FileName = ct[4:10] + "_" + ct[20:24]
+			outfile=open(FileName,'a')
 			outfile.write(ct[4:10])
 			outfile.write(" ")
 			outfile.write(ct[20:24])
