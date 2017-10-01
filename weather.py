@@ -5,13 +5,13 @@
 import serial
 import time
 
-arduino = serial.Serial('COM7',9600, timeout=.1) """Opens the serial port"""
+arduino = serial.Serial('COM7',9600, timeout=.1)
 
 def main():
        
 	while True:
 		data = arduino.readline()[:-2] #the last bit gets rid of the new-line chars
-		ct = time.asctime( time.localtime(time.time()) )
+		ct = time.asctime(time.localtime(time.time()) )
 		if data:
 			"""outputs the data and timestamp"""
 			print (ct[4:10],',',ct[20:24],',',ct[11:19],',',data)
@@ -23,7 +23,7 @@ def main():
 			outfile.write(",")
 			outfile.write(ct[11:19])
 			outfile.write(",")
-			outfile.write(str(data[3:12]))
+			outfile.write(str(data))
 			outfile.write("\n")
 			outfile.close()
 
